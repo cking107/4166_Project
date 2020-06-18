@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/stylesheets/index.css">
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <% include partials/user-navigation.ejs %>
+  <% include partials/site-navigation.ejs %>
+  <td id="content">
+    <h2>Please enter your email and create a password to sign up.</h2>
+    <fieldset id="loginfield">
+    <form action="/signin" method="post">
+      <label for="signupemail" class="loginlabel">Email:</label>
+      <input type="text" name="signupemail" value=""><br><br>
+      <label for="signuppassword" class="loginlabel">Password:</label>
+      <input type="text" name="signuppassword" value=""><br><br>
+      <label for="signupfn" class="loginlabel">First Name:</label>
+      <input type="text" name="signupfn" value=""><br><br>
+      <label for="signupln" class="loginlabel">Last Name:</label>
+      <input type="text" name="signupln" value=""><br><br>
+      <hr>
+      <p>*These fields are optional*</p>
+      <label for="signupaddress" class="loginlabel">Address:</label>
+      <input type="text" name="signupaddress" value=""><br><br>
+      <label for="signupcity" class="loginlabel">City:</label>
+      <input type="text" name="signupcity" value=""><br><br>
+      <label for="signupstate" class="loginlabel">State:</label>
+      <input type="text" name="signupstate" value=""><br><br>
+      <label for="signupzip" class="loginlabel">Zip:</label>
+      <input type="text" name="signupzip" value=""><br><br>
+      <label for="signupcountry" class="loginlabel">Country:</label>
+      <input type="text" name="signupcountry" value=""><br><br>
+      <input type="submit" name="submit" value="Sign Up">
+    </form>
+    </fieldset>
+  </td>
+  <% include partials/footer.ejs %>
+</body>
+
+</html>

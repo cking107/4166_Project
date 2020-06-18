@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Item</title>
+  <link rel="stylesheet" href="/assets/stylesheets/item.css">
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <% include partials/user-navigation.ejs %>
+  <% include partials/site-navigation.ejs %>
+  <td id="content">
+    <table id="itemhead">
+      <tr>
+        <td>
+          <img src="<%= data.item.imageURL %>" alt="Cover art" id="coverart">
+          <h2>
+            <%= data.item.itemName %>
+          </h2>
+          <a href="#" id="artist">
+            <%= data.item.artist %></a><br><br>
+        </td>
+        <td>
+          <p class="contentsubhead">Type:
+            <%= data.item.type %>
+          </p>
+          <p class="contentsubhead">Genre(s):
+            <%= data.item.catalogCategory %>
+          </p>
+          <p class="contentsubhead">Rating:
+            <%= data.item.rating %>
+          </p><br>
+        </td>
+      </tr>
+    </table>
+
+    <form action="profile" method="post">
+      <input type="hidden" name="itemCode" value="<%= data.item.itemCode %>" />
+      <input type="hidden" name="itemList" value="<%= data.item.itemCode %>" />
+      <br> <select name="rating">
+        <option value=""></option>
+        <option value="1" <% if (data.rating==1){ %>selected ='selected'
+          <% } %> >1</option>
+        <option value="2" <% if (data.rating==2 ){ %>selected ='selected'
+          <% } %> >2</option>
+        <option value="3" <% if (data.rating==3 ){ %>selected ='selected'
+          <% } %> >3</option>
+        <option value="4" <% if (data.rating==4 ){ %>selected ='selected'
+          <% } %> >4</option>
+        <option value="5" <% if (data.rating==5 ){ %>selected ='selected'
+          <% } %> >5</option>
+        <option value="6" <% if (data.rating==6 ){ %>selected ='selected'
+          <% } %> >6</option>
+        <option value="7" <% if (data.rating==7 ){ %>selected ='selected'
+          <% } %> >7</option>
+        <option value="8" <% if (data.rating==8 ){ %>selected ='selected'
+          <% } %> >8</option>
+        <option value="9" <% if (data.rating==9 ){ %>selected ='selected'
+          <% } %> >9</option>
+        <option value="10" <% if (data.rating==10 ){ %>selected ='selected'
+          <% } %> >10</option>
+      </select>
+
+      <button type="submit" class="submitButton" name="action" value="rate">Confirm Rating</button><br>
+      <p>
+        Yes
+        <input type="radio" name="listened" value='Yes' <% if (data.listened=="Yes" ){ %>checked
+        <% } %> >
+        No
+        <input type="radio" name="listened" value='No' <% if (data.listened=="No" ){ %>checked
+        <% } %> >
+
+        <button type="submit" class="submitButton" name="action" value="listened">Update Listened</button>
+      </p>
+    </form>
+    <a href="/categories" id="back">Back</a>
+  </td>
+  <% include partials/footer.ejs %>
+</body>
+
+</html>

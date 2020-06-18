@@ -1,0 +1,133 @@
+* {
+  font-family: Arial;
+  background-color: #DDF2EB
+}
+
+nav {
+  text-align: center;
+  background-color: #D3CDD7
+}
+
+nav a {
+  background-color: #D3CDD7
+}
+
+footer {
+  padding: 10px;
+  background-color: #D3CDD7
+}
+
+.borderlines {
+  border: 1px solid black;
+}
+
+.navlinks {
+  text-decoration: none;
+  color: #606D5D;
+  padding-right: 5px;
+  display: inline;
+}
+
+.sidelinks {
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #606D5D;
+  background-color: #D3CDD7
+}
+
+.buttons {
+  border-radius: 8px;
+  background-color: #D3CDD7;
+  height: 30px;
+  width: 120px;
+}
+
+#header {
+  margin-bottom: 10px;
+  background-color: #D3CDD7
+}
+
+#navigation {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #D3CDD7
+}
+
+#link1 {
+  border-right: 1px solid black;
+}
+
+#link2 {
+  border-right: 1px solid black;
+}
+
+#title {
+  text-align: center;
+  background-color: #D3CDD7
+}
+
+#signin {
+  text-align: right;
+  padding-right: 10px;
+  vertical-align: top;
+  float: right;
+  background-color: #D3CDD7
+}
+
+#main {
+  margin-bottom: 10px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+#sidebar {
+  width: 20%;
+  height: 71vh;
+  vertical-align: top;
+  background-color: #D3CDD7
+}
+
+#content {
+  vertical-align: top;
+  text-align: left;
+  padding-left: 10px;
+  position: relative;
+}
+
+#coverart {
+  width: 200px;
+  height: 200px;
+  float: left;
+  padding-right: 15px;
+}
+
+#artist {
+  text-decoration: none;
+  color: #0075F2;
+}
+
+#ratesave {
+  padding-top: 20px;
+}
+
+#ratemenu {
+  height: 30px;
+  float: left;
+}
+
+#back {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#itemhead {
+  width: 100%;
+  height: 200px;
+}
+
+.contentsubhead {
+  font-weight: bold;
+  font-size: 18px;
+}

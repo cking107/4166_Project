@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Categories</title>
+  <link rel="stylesheet" href="assets/stylesheets/categories.css">
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <% include partials/user-navigation.ejs %>
+  <% include partials/site-navigation.ejs %>
+  <td id="content">
+
+    <%
+        for(var j = 0; j < data.length; j++){
+    %>
+    <h2>
+      <%= data[j].categoryName %>
+
+    </h2>
+    <%
+        for(var i = 0; i < data[j].items.length; i++){
+    %>
+    <p>
+      <a href="/categories/item/<%= data[j].items[i].itemCode %>" class="musiclink">
+        <%= data[j].items[i].itemName %>
+      </a>
+    </p>
+    <% } %>
+    <% } %>
+
+
+  </td>
+  <% include partials/footer.ejs %>
+</body>
+
+</html>

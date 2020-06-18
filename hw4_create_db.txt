@@ -1,0 +1,27 @@
+use music
+
+db.createCollection('items');
+
+db.createCollection('users');
+
+db.createCollection('userItems');
+
+db.items.insert({itemCode: 1, itemName: "OK Computer",  artist: "Radiohead", type: "Album", catalogCategory: "Alternative Rock", rating: "10", description: "OK Computer is Radiohead's third studio album. Released in 1997, this is album has made a big impact on music as a whole. Radiohead's style has bled into the alternative rock genre because of infulence from OK Computer.", imageURL: "/assets/images/okcomputer.jpg"});
+
+db.items.insert({itemCode: 2, itemName: "Nevermind",  artist: "Nirvana", type: "Album", catalogCategory: "Alternative Rock", rating: "7", description: "Nevermind is the second studio album by American rock band Nirvana, released on September 24, 1991 by DGC Records. Nevermind not only popularized the Seattle grunge movement but also brought alternative rock as a whole into the mainstream, establishing its commercial and cultural viability.", imageURL: "/assets/images/nevermind.jpg"});
+
+db.items.insert({itemCode: 3, itemName: "The Queen Is Dead",  artist: "The Smiths", type: "Album", catalogCategory: "Alternative Rock", rating: "9", description: "The Queen Is Dead is the third studio album by English rock band the Smiths. The Queen Is Dead received critical acclaim, and is considered to be a defining album of the 1980s, as well as one of the greatest albums of all time.", imageURL: "/assets/images/thequeenisdead.png"});
+
+db.items.insert({itemCode: 4, itemName: "Kind Of Blue",  artist: "Miles Davis", type: "Album", catalogCategory: "Jazz", rating: "10", description: "Kind of Blue is a studio album by American jazz trumpeter Miles Davis. It was recorded on March 2 and April 22, 1959, at Columbia's 30th Street Studio in New York City, and released on August 17 of that year by Columbia Records. Kind of Blue has been regarded by many critics as the greatest jazz record, Davis's masterpiece, and one of the best albums of all time. Its influence on music, including jazz, rock, and classical genres, has led writers to also deem it one of the most influential albums ever recorded.", imageURL: "/assets/images/kindofblue.jpg"});
+
+db.items.insert({itemCode: 5, itemName: "A Love Supreme",  artist: "John Coltrane", type: "Album", catalogCategory: "Jazz", rating: "10", description: "A Love Supreme is an album by American jazz saxophonist John Coltrane. A Love Supreme is a suite with four parts: Acknowledgement, (which includes the oral chant that gives the album its name), Resolution, Pursuance, and Psalm. Coltrane plays tenor saxophone on all parts.", imageURL: "/assets/images/alovesupreme.jpg"});
+
+db.items.insert({itemCode: 6, itemName: "Moon Beams",  artist: "Bill Evans", type: "Album", catalogCategory: "Jazz", rating: "10", description: "Moon Beams is a 1962 album by jazz musician Bill Evans, and the first trio album recorded by Evans after the death of Scott LaFaro. Moon Beams contains a collection of ballads recorded during 1962.", imageURL: "/assets/images/moonbeams.jpg"});
+
+db.users.insert({userID: 1, password: "password", firstName: "Cameron", lastName: "King", email: "cking107@uncc.edu", address: "5612 Saddlebrook Drive", city: "Lewisville", state: "North Carolina", zip: "27023", country: "United States"});
+
+db.userItems.insert({item: "OK Computer", rating: "10", listened: "Yes"});
+
+db.userItems.insert({item: "Kind Of Blue", rating: "10", listened: "Yes"});
+
+db.userItems.insert({item: "The Queen Is Dead", rating: "10", listened: "No"});

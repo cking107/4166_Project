@@ -1,0 +1,21 @@
+{
+  "name": "4166_project",
+  "version": "1.0.0",
+  "description": "Project for ITIS 4166",
+  "main": "index.ejs",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "mongoose": "^5.4.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cameron King",
+  "license": "ISC"
+}

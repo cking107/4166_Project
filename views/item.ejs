@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Item</title>
+  <link rel="stylesheet" href="/assets/stylesheets/item.css">
+</head>
+
+<body>
+  <% include partials/header.ejs %>
+  <% include partials/user-navigation.ejs %>
+  <% include partials/site-navigation.ejs %>
+  <td id="content">
+    <table id="itemhead">
+      <tr>
+        <td>
+          <img src="<%= data.imageURL %>" alt="Cover art" id="coverart">
+          <h2>
+            <%= data.itemName %>
+          </h2>
+          <a href="#" id="artist">
+            <%= data.artist %></a><br><br>
+
+          <form action="/profile" method="post">
+            <input type="hidden" name="itemCode" value="<%= data.itemCode %>" />
+            <input type="hidden" name="itemList" value="<%= data.itemCode %>" />
+            <button type="submit" name="action" value="rate" class="buttons">Rate Album</button><br><br>
+            <% if(typeof data.inProfile != "undefined" && data.inProfile == false){ %>
+            <button type="submit" name="action" value="save" class="buttons">Save Album</button><%}%>
+          </form>
+
+        </td>
+        <td>
+          <p class="contentsubhead">Type:
+            <%= data.type %>
+          </p>
+          <p class="contentsubhead">Genre(s):
+            <%= data.catalogCategory %>
+          </p>
+          <p class="contentsubhead">Rating:
+            <%= data.rating %>
+          </p><br>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <%= data.description %>
+    </p>
+    <a href="/categories" id="back">Back</a>
+  </td>
+  <% include partials/footer.ejs %>
+</body>
+
+</html>

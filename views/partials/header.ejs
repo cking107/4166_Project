@@ -1,0 +1,9 @@
+<header>
+  <div id="header" class="borderlines">
+    <%if (typeof theUser !== 'undefined'){ %>
+    <p id="signin"> Welcome <%= theUser.firstName %>!</p>
+    <% } else { %>
+      <p id="signin">Not signed in.</p>
+    <% } %>
+    <h1 id="title">Music Collection</h1>
+  </div>

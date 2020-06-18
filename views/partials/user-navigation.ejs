@@ -1,0 +1,12 @@
+<div id="navigation" class="borderlines">
+  <nav>
+    <%if (typeof theUser != 'undefined'){ %>
+    <a href="/profile?action=signout" class="navlinks" id="link1">Sign Out</a>
+    <% } else {%>
+    <a href="/signin" class="navlinks" id="link1">Sign In</a>
+    <% } %>
+    <a href="/signin" class="navlinks" id="link2">My Music</a>
+    <a href="#" class="navlinks">Cart</a>
+  </nav>
+</div>
+</header>
